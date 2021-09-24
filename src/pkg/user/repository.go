@@ -9,9 +9,9 @@ type Repository struct {
 }
 
 func NewRepository() *Repository {
-	return &Repository{
-		UserRepository: &Repository{},
-	}
+	repository := &Repository{}
+	repository.UserRepository = repository
+	return repository
 }
 
 func (s *Repository) GetRepo(number int) int {
